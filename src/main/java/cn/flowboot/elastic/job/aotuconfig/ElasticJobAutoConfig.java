@@ -84,6 +84,9 @@ public class ElasticJobAutoConfig {
          * 获取注解信息
          */
         cn.flowboot.elastic.job.annotation.ElasticJob elasticJob = instance.getClass().getAnnotation(cn.flowboot.elastic.job.annotation.ElasticJob.class);
+        if (!elasticJob.enable()){
+            return;
+        }
         String jobName = elasticJob.name();
         String cron = elasticJob.cron();
         int shardingTotalCount = elasticJob.shardingTotalCount();

@@ -4,6 +4,7 @@ import cn.flowboot.elastic.job.properties.ZookeeperProperties;
 import com.dangdang.ddframe.job.reg.base.CoordinatorRegistryCenter;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperConfiguration;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -27,6 +28,9 @@ public class ZookeeperAutoConfig {
 
     @Bean(initMethod = "init")
     public CoordinatorRegistryCenter zkCenter(){
+        if (StringUtils.isBlank(zookeeperProperties.getNamespace())) {
+            throw new RuntimeException("zkCenter: namespace parameter is not configured");
+        }
         ZookeeperConfiguration zc = new ZookeeperConfiguration(zookeeperProperties.getServer(),zookeeperProperties.getNamespace());
         zc.setMaxSleepTimeMilliseconds(zookeeperProperties.getMaxSleepTimeMilliseconds());
         zc.setBaseSleepTimeMilliseconds(zookeeperProperties.getBaseSleepTimeMilliseconds());

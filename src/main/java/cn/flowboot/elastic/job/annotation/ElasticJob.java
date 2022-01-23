@@ -10,7 +10,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * <h1></h1>
+ * <h1>ElasticJob 任务注解</h1>
  *
  * @version 1.0
  * @author: Vincent Vic
@@ -22,17 +22,21 @@ import java.lang.annotation.Target;
 public @interface ElasticJob {
 
     /**
-     * 任务名称
+     * 是否启用
+     */
+    boolean enable() default true;
+    /**
+     * 任务名称 【必填】
      */
     String name() default  "";
 
     /**
-     * cron表达式，用于控制作业触发时间,默认每间隔10秒钟执行一次
+     * cron表达式，用于控制作业触发时间,默认每间隔10秒钟执行一次 【必填】
      */
     String cron() default  "";
 
     /**
-     * 作业分片总数
+     * 作业分片总数 【不能为0或者小于0】
      */
     int shardingTotalCount() default 1;
 
@@ -42,7 +46,7 @@ public @interface ElasticJob {
     boolean override() default false;
 
     /**
-     * 是否流式处理
+     * 是否流式处理 注: 在DataflowJob 中才有效
      */
     boolean streamingProcess() default false;
 
