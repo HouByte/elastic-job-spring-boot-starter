@@ -1,10 +1,10 @@
 # elastic-job-spring-boot-starter
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![Gitee release](https://img.shields.io/badge/release-Gitee-4EB1BA.svg)](https://gitee.com/Vincent-Vic/elastic-job-spring-boot-starter/releases/1.0.0)
+[![Gitee release](https://img.shields.io/badge/release-Gitee-4EB1BA.svg)](https://gitee.com/Vincent-Vic/elastic-job-spring-boot-starter/releases/V1.0.0)
 [![JDK](https://img.shields.io/badge/JDK-1.8+-4EB1BA.svg)](https://docs.oracle.com/javase/8/docs/index.html)
 [![SpringBoot](https://img.shields.io/badge/SpringBoot-2.6.3-green.svg)](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/)
-[![Maven](https://img.shields.io/badge/Maven-1.0.0-4EB1BA.svg)](https://docs.oracle.com/javase/8/docs/index.html)
+[![Maven](https://img.shields.io/badge/Maven-1.0.0-4EB1BA.svg)]()
 [![Author](https://img.shields.io/badge/Author-VincentVic-orange.svg?style=flat-square)](https://gitee.com/Vincent-Vic)
 
 ## 简介
