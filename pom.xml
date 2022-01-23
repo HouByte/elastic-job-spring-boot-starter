@@ -8,7 +8,7 @@
     <groupId>cn.flowboot</groupId>
     <artifactId>elastic-job-spring-boot-starter</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>elastic-job-lite-spring-boot-starter</description>
     <url>https://gitee.com/Vincent-Vic/elastic-job-spring-boot-starter</url>
